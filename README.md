@@ -30,11 +30,11 @@ Since I’m still learning JavaScript, I decided to do this challenge in JS to g
 
 ---
 
-## Current progress ![](https://geps.dev/progress/12)
+## Current progress ![](https://geps.dev/progress/16)
 
 |   Day   | Part 1                                    | Status | Part 2                                  | Status | Comments |
 | :-----: | :---------------------------------------- | :----: | :-------------------------------------- | :----: | :------- |
-| [1](Day_01) | [Part&nbsp;I](Day_01/js/part1.js)     |   ✅   | [Part&nbsp;II](Day_01/js/part2.js)       |   ⏳   |          |
+| [1](Day_01) | [Part&nbsp;I](Day_01/js/part1.js)     |   ✅   | [Part&nbsp;II](Day_01/js/part2.js)       |   ✅   |          |
 | [2](Day_02) | [Part&nbsp;I](Day_02/js/part1.js)     |   ✅   | [Part&nbsp;II](Day_02/js/part2.js)       |   ✅   |          |
 | [3](#)      | [Part&nbsp;I](#)                      |   ⏳   | [Part&nbsp;II](#)                        |   ⏳   |          |
 | [4](#)      | [Part&nbsp;I](#)                      |   ⏳   | [Part&nbsp;II](#)                        |   ⏳   |          |
