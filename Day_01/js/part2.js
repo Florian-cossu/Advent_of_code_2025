@@ -5,55 +5,29 @@ function part2Main(input) {
     
     for (let line of lines) {
         if (!line.trim()) continue;
-        let untouchedDialPos = dialPos;
+
+        let originalDialPos = dialPos
         let dir = line[0];
         let rotations = parseInt(line.substring(1));
-        let change = dir === "L" ? -rotations : rotations;
-        
-        dialPos += change;
+        let rotation = dir === "L" ? -rotations : rotations;
+        if (Math.abs(rotation) >= 100) {
+            password += Math.floor(Math.abs(rotation)/100)
+            rotation = rotation%100
+        }
+
+        dialPos += rotation;
 
         if (dialPos === 0) {
             password++;
-        }
-        
-        if (dialPos > 100) {
-            let it = change / 100
-            if (it >= 1) {
-                while (it > 0) {
-                    dialPos -= 100
-                    it--
-                    password++
-                }
-                dialPos == 0 ? password++ : null;
-                dialPos = dialPos - 100
-                password++
-            } else if (untouchedDialPos > 0 && dialPos < 0) {
-                dialPos += dialPos - 100
-                password++
-            }
+            console.log(`${line} - ${originalDialPos} -> ${dialPos} === 0 - ${password}`)
+        } else if (dialPos > 99) {
+            console.log(`${line} - ${originalDialPos} -> ${dialPos} > 99 - ${password}`)
+            dialPos = dialPos%100
+            password++
         } else if (dialPos < 0) {
-            let it = Math.abs(change) / 100
-            if (it >= 1) {
-                while (it > 0) {
-                    dialPos += 100
-                    it--
-                    password++
-                }
-                dialPos == 0 ? password++ : null;
-                dialPos += 100
-                password++
-            } else if (untouchedDialPos < 0 && dialPos > 0) {
-                dialPos += 100
-                password++
-            }
-        } else if (untouchedDialPos < 0 && dialPos > 0) {
-            dialPos += 100
-            password++
-            dialPos == 0 ? password++ : null;
-        } else if (untouchedDialPos > 0 && dialPos < 0) {
-            dialPos += dialPos - 100
-            password++
-            dialPos == 0 ? password++ : null;
+            console.log(`${line} - ${originalDialPos} -> ${dialPos} < 0 - ${password}`)
+            dialPos = 100 + dialPos%100
+            if (originalDialPos !== 0) password++
         }
     }
     
