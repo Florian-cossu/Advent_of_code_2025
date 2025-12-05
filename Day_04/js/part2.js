@@ -40,6 +40,8 @@ function  checkAdjacent2 (diagram, tmpDiagram, line, col) {
     let result = 0;
     let posContents = diagram[line][col]
 
+    if (posContents !== "@") return 0
+
     diagram[line-1] !== undefined && diagram[line-1][col-1] !== undefined && posContents === "@" && diagram[line-1][col-1] === "@" ? adjCount++ : null;
     diagram[line-1] !== undefined && diagram[line-1][col] !== undefined && posContents === "@" && diagram[line-1][col] === "@" ? adjCount++ : null;
     diagram[line-1] !== undefined && diagram[line-1][col+1] !== undefined && posContents === "@" && diagram[line-1][col+1] === "@" ? adjCount++ : null;
