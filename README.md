@@ -37,7 +37,7 @@ Since I’m still learning JavaScript, I decided to do this challenge in JS to g
 | [1](Day_01)  | [Part&nbsp;I](Day_01/js/part1.js)         |   ✅   | [Part&nbsp;II](Day_01/js/part2.js)       |   ✅   |          |
 | [2](Day_02)  | [Part&nbsp;I](Day_02/js/part1.js)         |   ✅   | [Part&nbsp;II](Day_02/js/part2.js)       |   ✅   |          |
 | [3](Day_03)  | [Part&nbsp;I](Day_03/js/part1.js)         |   ✅   | [Part&nbsp;II](Day_03/js/part2.js)       |   ⏳   |          |
-| [4](Day_04)  | [Part&nbsp;I](Day_04/js/part1.js)         |   ✅   | [Part&nbsp;II](Day_04/js/part2.js)       |   ⏳   |          |
+| [4](Day_04)  | [Part&nbsp;I](Day_04/js/part1.js)         |   ✅   | [Part&nbsp;II](Day_04/js/part2.js)       |   ✅   |          |
 | [5](Day_05)  | [Part&nbsp;I](Day_05/js/part1.js)         |   ⏳   | [Part&nbsp;II](Day_05/js/part2.js)       |   ⏳   |          |
 | [6](Day_06)  | [Part&nbsp;I](Day_06/js/part1.js)         |   ⏳   | [Part&nbsp;II](Day_06/js/part2.js)       |   ⏳   |          |
 | [7](Day_07)  | [Part&nbsp;I](Day_07/js/part1.js)         |   ⏳   | [Part&nbsp;II](Day_07/js/part2.js)       |   ⏳   |          |

@@ -1,7 +1,7 @@
 function part2Main(input) {
     let lines = input.split('\n');
     let diagram = [];
-    let tmpDiagram = []
+    let tmpDiagram = [];
     let count = 0;
     
     for (let line of lines) {
@@ -14,14 +14,25 @@ function part2Main(input) {
     const diagY2 = diagram.length - 1
     const diagX2 = diagram[0].length - 1
 
+    let keepCycling = true
+
     // console.log({diagX2, diagY2})
 
-    for (let i = 0; i < diagY2+1; i++) {
-        for (let j = 0; j < diagX2+1; j++) {
-            parseInt( checkAdjacent2(diagram, tmpDiagram, i, j)) == 1 ? count++ : null;
-            // console.log(`Adding ${ checkAdjacent2(diagram, i, j)}`)
+    while (keepCycling === true) {
+        let initCount = count
+
+        for (let i = 0; i < diagY2+1; i++) {
+            for (let j = 0; j < diagX2+1; j++) {
+                parseInt( checkAdjacent2(diagram, tmpDiagram, i, j)) == 1 ? count++ : null;
+                // console.log(`Adding ${ checkAdjacent2(diagram, i, j)}`)
+            }
         }
+        
+        diagram = tmpDiagram
+
+        if (count == initCount) keepCycling = false
     }
+    
 
     console.log(tmpDiagram)
 
@@ -30,7 +41,8 @@ function part2Main(input) {
 
 /**
  * 
- * @param {arr[arr]} diagram The diagram an array of array
+ * @param {arr} diagram The diagram an array of array
+ * @param {arr} tmpDiagram A copy of the diagram which contains the map of rolls that will be removed
  * @param {int} line The line of the diagram
  * @param {int} col The column of the line from the diagram
  * @returns {int} Returns 1 or 0 depending on whether the current index in the diagram satisfies the no more than 4 @ in the adjacent positions
@@ -54,7 +66,7 @@ function  checkAdjacent2 (diagram, tmpDiagram, line, col) {
     // console.log(`Line ${line}, col ${col}, posContents ${posContents}, adjCount ${adjCount}, ${adjCount < 4 && posContents === "@" ? "adding to roll count" : "not adding to roll count"}`)
 
     if (adjCount < 4 && posContents === "@") {
-        tmpDiagram[line][col] = "X"
+        tmpDiagram[line][col] = "."
         result = 1
     }
 

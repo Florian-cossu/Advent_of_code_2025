@@ -26,7 +26,7 @@ function part1Main(input) {
 
 /**
  * 
- * @param {arr[arr]} diagram The diagram an array of array
+ * @param {arr} diagram The diagram an array of array
  * @param {int} line The line of the diagram
  * @param {int} col The column of the line from the diagram
  * @returns {int} Returns 1 or 0 depending on whether the current index in the diagram satisfies the no more than 4 @ in the adjacent positions
