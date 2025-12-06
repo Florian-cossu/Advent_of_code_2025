@@ -5,7 +5,6 @@ function part1Main(input) {
     let freshIngredients = 0;
     
     for (let line of lines) {
-        const currLine = line.toString
         const rangeRgx = /\-/
         const idsRgx = /\d+/
 
