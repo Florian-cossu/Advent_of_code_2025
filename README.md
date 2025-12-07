@@ -39,7 +39,7 @@ Since I’m still learning JavaScript, I decided to do this challenge in JS to g
 | [3](Day_03)  | [Part&nbsp;I](Day_03/js/part1.js)         |   ✅   | [Part&nbsp;II](Day_03/js/part2.js)       |   ⏳   |          |
 | [4](Day_04)  | [Part&nbsp;I](Day_04/js/part1.js)         |   ✅   | [Part&nbsp;II](Day_04/js/part2.js)       |   ✅   |          |
 | [5](Day_05)  | [Part&nbsp;I](Day_05/js/part1.js)         |   ✅   | [Part&nbsp;II](Day_05/js/part2.js)       |   ✅   |          |
-| [6](Day_06)  | [Part&nbsp;I](Day_06/js/part1.js)         |   ⏳   | [Part&nbsp;II](Day_06/js/part2.js)       |   ⏳   |          |
+| [6](Day_06)  | [Part&nbsp;I](Day_06/js/part1.js)         |   ✅   | [Part&nbsp;II](Day_06/js/part2.js)       |   ⏳   |          |
 | [7](Day_07)  | [Part&nbsp;I](Day_07/js/part1.js)         |   ⏳   | [Part&nbsp;II](Day_07/js/part2.js)       |   ⏳   |          |
 | [8](Day_08)  | [Part&nbsp;I](Day_08/js/part1.js)         |   ⏳   | [Part&nbsp;II](Day_08/js/part2.js)       |   ⏳   |          |
 | [9](Day_09)  | [Part&nbsp;I](Day_09/js/part1.js)         |   ⏳   | [Part&nbsp;II](Day_09/js/part2.js)       |   ⏳   |          |
@@ -48,4 +48,4 @@ Since I’m still learning JavaScript, I decided to do this challenge in JS to g
 | [12](Day_12) | [Part&nbsp;I](Day_12/js/part1.js)         |   ⏳   | [Part&nbsp;II](Day_12/js/part2.js)       |   ⏳   |          |
 
 
-[progress]: https://geps.dev/progress/33
+[progress]: https://geps.dev/progress/41
