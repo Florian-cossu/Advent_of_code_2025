@@ -1,7 +1,7 @@
 function part2Main(input) {
     let lines = input.split('\n');
     let ranges = [];
-    let ids = [];
+    count = 0;
     
     for (let line of lines) {
         const rangeRgx = /\-/
@@ -23,10 +23,6 @@ function part2Main(input) {
         }
     }
 
-    // console.group('DATA')
-    //     console.log(ranges)
-    // console.groupEnd()
-
     let sortedRanges = ranges.sort(function(a, b) {
         if (a[0] == b[0]) {
             return a[1] - b[1];
@@ -34,47 +30,34 @@ function part2Main(input) {
         return a[0] - b[0];
     });
 
-    let tmp = []
-
-    for (let range of sortedRanges) {
-        tmp.push(range)
-    }
-
-    console.log(tmp)
-
-    for (let i=0; i<sortedRanges.length; i++) {
+    for (let i=0; i<sortedRanges.length -1; i++) {
         let [a,b] = sortedRanges[i]
         let [x,y] = sortedRanges[i+1]
 
-        console.group("DEBUG")
-        console.log(`Looking at range ${sortedRanges[i]}`)
-        console.log(`Next range ${sortedRanges[i+1]}`)
-        console.groupEnd()
+        // console.group("DEBUG")
+        // console.log(`Looking at range ${sortedRanges[i]}`)
+        // console.log(`Next range ${sortedRanges[i+1]}`)
+        // console.groupEnd()
 
-        if (a < x && x < b && a < y && y < b) {
-            console.log(`merging ${sortedRanges[i+1]} into ${sortedRanges[i]}`)
-            sortedRanges.splice(i+1)
+        if (x <= b && a <= y && y <= b) {
+            // console.log(`merging ${sortedRanges[i+1]} into ${sortedRanges[i]}`)
+            sortedRanges.splice(i+1,1)
             i--
-            console.log(`Next range ${sortedRanges[i]}`)
-        } else if (a < x && x < b && b < y) {
-            console.log(`merging ${sortedRanges[i+1]} and ${sortedRanges[i]}`)
+            // console.log(`Next range ${sortedRanges[i]}`)
+        } else if (a <= x && x <= b && b <= y) {
+            // console.log(`merging ${sortedRanges[i+1]} and ${sortedRanges[i]}`)
             sortedRanges[i][1] = y
-            sortedRanges.splice(i+1)
+            sortedRanges.splice(i+1,1)
             i--
-            console.log(`Next range ${sortedRanges[i]}`)
+            // console.log(`Next range ${sortedRanges[i]}`)
         }
     }
 
-    console.log(sortedRanges)
+    // console.log(sortedRanges)
 
-    // for (let range of ranges) {
-    //     console.log(`Working on range: ${range}`)
-    //     for (let i = range[0]; i<=range[1]; i++) {
-    //         if (!ids.includes(i)) {
-    //             ids.push(i)
-    //         }
-    //     }
-    // }
+    for (let range of sortedRanges) {
+        count += (range[1] - range[0])+1
+    }
     
-    resultDisplay(ids.length);
+    resultDisplay(count);
 }
